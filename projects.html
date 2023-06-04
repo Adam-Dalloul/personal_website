@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-gap: 10px; 
+        justify-items: center; 
+    }
+
+     .project-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 300px;
+      padding: 20px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .project-card a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .project-card p {
+      margin: 10px 0;
+    }
+
+    .project-card .links-container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+    }
+
+    .project-card .links-container a {
+      margin-bottom: 10px;
+    }
+
+    .header {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+
+    .github-web-projects {
+        grid-column: 1 / span 3;      
+        grid-row: 2;
+    }
+    </style>
+</head>
+<body>
+    <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="active right"><a href="projects.html">All Projects</a></li>
+      </ul>
+
+    <div class="grid-container">
+        <div class="grid-item header">
+            <h1>Web Design Projects</h1>
+        </div>
+
+        <div class="grid-item github-web-projects">  
+        <div id="projects-container"></div>
+        </div>
+
+    </div>
+      
+
+<script src="js/script.js"></script>
+</body>
+</html>
