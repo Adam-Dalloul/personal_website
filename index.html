@@ -48,12 +48,24 @@
     }
 
     .my-portrait {
-        grid-column: 1 / span 3; 
+        grid-column: 1 / span 3;
         grid-row: 3;
         display: flex;
         justify-content: center;
         align-items: center;
         padding-top: 10px;
+    }
+
+    .my-portrait img {
+        max-width: 100%; 
+        height: auto; 
+    }
+
+    @media screen and (max-width: 600px) {
+        .my-portrait {
+            grid-column: 1 / span 2;
+            padding-top: 5px;
+        }
     }
 
     .personal-statement {
