@@ -6,65 +6,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
     <style>
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr; 
-            grid-gap: 10px; 
-            justify-items: center; 
-        }
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        justify-items: center;
+        align-items: center;
+        margin: 20px;
+    }
 
-        .header {
-            grid-column: 1 / span 3;     
-            grid-row: 1;      
-        }
+    .header {
+        grid-column: 1 / span 3;     
+        grid-row: 1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
-        .github-logo {
-            grid-column: 1 / span 3;          
-            grid-row: 2; 
+    .logo {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 50%;
+        transition: transform 0.3s;
+    }
+    
+    .logo img {
+        max-width: 60%;
+        max-height: 60%;
+    }
 
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-            width: 50px; 
-            height: 50px; 
-        }
+    .logo:hover {
+        transform: scale(1.2);
+    }
 
-        .github-logo img {
-            width: 100%;
-            height: 100%;
-            transition: transform 0.3s;
-        }
+    .my-portrait {
+        grid-column: 1 / span 3; 
+        grid-row: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+    }
 
-        .github-logo:hover img {
-            transform: scale(1.2);
-        }
+    .personal-statement {
+        grid-column: 1 / span 3;
+        grid-row: 4;
+        background-color: #333;
+        border-radius: 8px;
+        padding: 20px;
+        color: white;
+        text-align: center;
+    }
+
+    .personal-statement p {
+        margin: 0;
+    }   
     </style>
 </head>
 <body>
     <ul class="navbar">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li class="active"><a href="index.html">Home</a></li>        
         <li><a href="contact.html">Contact</a></li>
-        <li class="right"><a href="projects.html">All Projects</a></li>
+        <li><a href="projects.html">Projects</a></li>
       </ul>
     
       <div class="grid-container">
-        <div class="grid-item header">
-            <h1>Coding With Adam</h1>
+        <div class="grid-item header fade-in">
+            <h1>Adam Dalloul</h1>
         </div>
         
-        <div class="grid-item github-logo">
-        <a href="https://github.com/Adam-Dalloul" target="_blank">
-            <div class="github-logo">
-            <img src="images/github-logo.png" alt="GitHub Logo">
-            </div>
+        <div class="grid-item github-logo fade-in">
+            <a href="https://github.com/Adam-Dalloul" target="_blank">
+                <div class="logo">
+                    <img src="images/github-logo.png" alt="GitHub Logo">
+                </div>
+            </a>
         </div>
 
+        <div class="grid-item linkedin-logo fade-in">
+            <a href="https://www.linkedin.com/in/adam-dalloul/" target="_blank">
+                <div class="logo">
+                    <img src="images/linkendin-logo.png" alt="Linkendin Logo">
+                </div>
+            </a>
+        </div>
+
+        <div class="grid-item medium-logo fade-in">
+            <a href="https://medium.com/@adam.dalloul" target="_blank">
+                <div class="logo">
+                    <img src="images/medium-logo.png" alt="Medium Logo">
+                </div>
+            </a>       
+        </div>
+
+        <div id="about" class="grid-item my-portrait fade-in slide-up">
+            <img src="images/my-portrait.png" alt="My Portrait">
+        </div>
+
+        <div id="contact" class="grid-item personal-statement fade-in slide-up">
+            <p>As a driven entrepreneur and passionate technology enthusiast, I am a high school student at Eastside Preparatory School with a strong interest in the field of computer science. I am deeply engaged in various programs focused on business and have developed a solid understanding of its dynamics. With a desire to pursue a major in computer science, I am eager to apply my skills and knowledge to contribute to the ever-evolving world of technology. Looking forward to leveraging my entrepreneurial spirit and passion for technology to make a positive impact in the industry.</p>
+        </div>    
 
       </div>
+
+      <footer class="footer">
+        <div class="container">
+        <p class="footer-text">This website was made by Adam Dalloul.</p>
+        <p class="footer-text">All code is available on <a href="https://github.com/Adam-Dalloul" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+        <p class="footer-text">&copy; 2023 Adam Dalloul. All rights reserved.</p>
+        </div>
+    </footer>
+
 
 <script src="js/script.js"></script>
 </body>

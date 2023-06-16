@@ -1,21 +1,30 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
 
-ul.navbar {
+body {
+  background-color: #f2f2f2;
+}
+
+.navbar {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
-  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-ul.navbar li {
+.navbar li {
   float: left;
 }
 
-ul.navbar li a {
+.navbar li a {
   display: block;
   color: white;
   text-align: center;
@@ -25,23 +34,117 @@ ul.navbar li a {
   border-radius: 8px;
 }
 
-ul.navbar li a:hover {
+.navbar li a:hover {
   background-color: #111;
+  transform: scale(1.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;   
 }
 
-/* Additional styling for the navbar */
-ul.navbar li.active a {
-  font-weight: 1000;
+
+.navbar li.active a {
+  font-weight: bold;
   text-decoration: underline;
 }
 
-ul.navbar li.right {
-  float: right;
-}
-
+/* Mobile Optimizations */
 @media screen and (max-width: 600px) {
-  ul.navbar li.right,
   ul.navbar li {
     float: none;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .personal-statement {
+    padding: 10px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+  }
+}
+
+
+/* Additions for smooth scrolling */
+.grid-item {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.grid-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.footer {
+  background-color: #555;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-text {
+  margin-bottom: 10px;
+  color: #ccc;
+  text-align: center;
+}
+
+.footer-text a {
+  color: white;
+  text-decoration: underline;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.footer-text a:hover {
+  opacity: 0.7;
+}
+
+
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.fade-in.active {
+  opacity: 1;
+}
+
+.slide-left {
+  transform: translateX(50px);
+  transition: transform 0.5s;
+}
+
+.slide-left.active {
+  transform: translateX(0);
+}
+
+.slide-up {
+  transform: translateY(50px);
+  transition: transform 0.5s;
+}
+
+.slide-up.active {
+  transform: translateY(0);
+} 
+
+/* Additions for smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+

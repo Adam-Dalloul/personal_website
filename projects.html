@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/icon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 
-    <style>
+  <style>
     .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr; 
-        grid-gap: 10px; 
-        justify-items: center; 
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 10px;
+      justify-items: center;
+      margin: 20px;
     }
 
-     .project-card {
+    .header {
+      grid-column: 1 / span 3;
+      grid-row: 1;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .github-web-projects {
+      grid-column: 2;
+    }
+
+    .project-card {     
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -31,55 +44,92 @@
 
     .project-card a {
       text-decoration: none;
-      color: #333;
-      font-weight: bold;
     }
 
     .project-card p {
-      margin: 10px 0;
+      font-weight: bold;
+      color: #333;
+      margin: 4px;
     }
 
     .project-card .links-container {
       display: flex;
       flex-direction: column;
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
-    .project-card .links-container a {
-      margin-bottom: 10px;
+    .project-card .links-container .website-link {
+      position: relative;
+      color: #333;
+      font-weight: normal;
+      overflow: hidden;
     }
 
-    .header {
-        grid-column: 1 / span 3;
-        grid-row: 1;
+    .project-card .links-container .website-link::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: #333;
+      transform: translateX(-50%);
+      transition: width 0.3s;
     }
 
-    .github-web-projects {
-        grid-column: 1 / span 3;      
-        grid-row: 2;
+    .project-card .links-container .website-link:hover::before {
+      width: 100%;
     }
-    </style>
+
+    .project-card .links-container .website-link:hover {
+      color: grey;
+    }
+
+    .project-card .links-container .code-link {
+      position: relative;
+      color: #333;
+      font-weight: normal;
+      overflow: hidden;
+    }
+
+    .project-card .links-container .code-link::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 2px; /* Adjust the thickness of the underline */
+      background-color: #333;
+      transform: translateX(-50%);
+      transition: width 0.3s;
+    }
+
+    .project-card .links-container .code-link:hover::before {
+      width: 100%;
+    }
+
+    .project-card .links-container .code-link:hover {
+      color: grey;
+    }
+
+  </style>
 </head>
 <body>
-    <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li class="active right"><a href="projects.html">All Projects</a></li>
-      </ul>
+  <ul class="navbar">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li class="active"><a href="projects.html">Projects</a></li>
+  </ul>
 
-    <div class="grid-container">
-        <div class="grid-item header">
-            <h1>Web Design Projects</h1>
-        </div>
-
-        <div class="grid-item github-web-projects">  
-        <div id="projects-container"></div>
-        </div>
-
+  <div class="grid-container">
+    <div class="grid-item header fade-in">
+      <h1>Web Design Projects</h1>
     </div>
-      
 
-<script src="js/script.js"></script>
+    <div class="grid-item github-web-projects fade-in slide-up" id="projects-container"></div>
+    
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
