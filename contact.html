@@ -27,7 +27,7 @@
       flex-direction: column;
       max-width: 400px;
       margin: 0 auto;
-      padding-top: 10px;
+      padding-top: 5px;
       padding-bottom: 20px;
     }      
 
@@ -67,38 +67,39 @@
     .email {
       text-align: center;
       margin: 20px;
+      margin-bottom: 50px;
     }
 
     .email a {
-    text-decoration: underline;
-    color: #5c5c5c;
-    position: relative;
-    display: inline-block;
-    transition: color 0.3s ease;
-    overflow: hidden;
-  }
+      text-decoration: underline;
+      color: #5c5c5c;
+      position: relative;
+      display: inline-block;
+      transition: color 0.3s ease;
+      overflow: hidden;
+    }
 
-  .email a::before {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background-color: #5c5c5c;
-    opacity: 0;
-    transition: width 0.3s ease, opacity 0.3s ease;
-  }
+    .email a::before {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #5c5c5c;
+      opacity: 0;
+      transition: width 0.3s ease, opacity 0.3s ease;
+    }
 
-  .email a:hover {
-    color: #111;
-  }
+    .email a:hover {
+      color: #111;
+    }
 
-  .email a:hover::before {
-    width: 100%;
-    opacity: 1;
-  }
+    .email a:hover::before {
+      width: 100%;
+      opacity: 1;
+    }
     </style>
 </head>
 <body>
