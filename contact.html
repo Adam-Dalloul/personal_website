@@ -11,8 +11,15 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-    .header {
+    .header,
+    .email {
       text-align: center;
+      margin: 20px;
+    }
+
+    .email {
+      margin-bottom: 60px;
+      margin-top: 10px;
     }
 
     form {
@@ -20,8 +27,8 @@
       flex-direction: column;
       max-width: 400px;
       margin: 0 auto;
-      padding: 30px;
-      font-family: 'Roboto', sans-serif;
+      padding-top: 10px;
+      padding-bottom: 20px;
     }      
 
     label {
@@ -56,6 +63,42 @@
     button:hover {
       background-color: #111;
     }
+
+    .email {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .email a {
+    text-decoration: underline;
+    color: #5c5c5c;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+    overflow: hidden;
+  }
+
+  .email a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #5c5c5c;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+  }
+
+  .email a:hover {
+    color: #111;
+  }
+
+  .email a:hover::before {
+    width: 100%;
+    opacity: 1;
+  }
     </style>
 </head>
 <body>
@@ -81,6 +124,14 @@
 
         <button type="submit">Submit</button>
     </form>
+
+    <div class="header fade-in"> 
+    <h1>Contact Email</h1>
+    </div>
+
+    <div class="email"> 
+    <a href="mailto:ad@adamdalloul.com">ad@adamdalloul.com</a>
+    </div>
 
     <footer class="footer">
       <div class="container">
