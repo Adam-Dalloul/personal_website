@@ -53,7 +53,6 @@ fetch('https://api.github.com/repos/AdamDalloul/AdamDalloul.github.io/contents')
     projectsContainer.appendChild(errorMessage);
   });
 
-  
 // Animations
 function checkVisibility() {
   const elements = document.querySelectorAll('.fade-in, .slide-up');
