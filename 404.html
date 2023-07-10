@@ -4,27 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found</title>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Chango&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <style>
-        body{
-            background-image: url("https://images.unsplash.com/photo-1616235132417-99f443954d2e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80");
+        body {
+            background-image: url("https://ucb6ac13587d0dc9edf46dd795b5.previews.dropboxusercontent.com/p/thumb/AB-f32XGCprkNZgKbJ9jCxwImRbWfgB5AE_CjA_ZhXdTpW9gLNxaYsSdaq88BkWBPOwsTtITmRXRYN8Gc0DazIYNvYRmhZEiF4pVLFoDZ4U35wYo-JqnU93wfcH377yqzGULpLqEVEzY29JTTdBPqSVO6zqmnxv81QisufX_QOosV4DPXFcj3IjZqNewKllXn_BDMg2_3eH-QL3rWUUQetayhiP0FOi0bed0IgAVCBjh41H_Ti_o-5Cu_VCGCm83vLL3NbHyRuImuokxqfnSSHg5nvI3C0l3ecWiHG8x9P03LuyrCeBlidTwMLR5tcTb0EZwoJP1kUJuSBlK1ciXt_do2Llhw7_icBE3MSd9NwaknCJp4cKXJPHzHnbgkP6FFy4/p.jpeg");
             background-size: cover;
             font-family: 'Roboto', 'sans-serif';
+            overflow: hidden;
         }
-        main{
+
+        html {
+            overflow: hidden;
+        }
+
+        main {
             display: flex;
             height: 100vh;
             justify-content: center;
             align-items: center;
             flex-direction: column;
         }
-        .header404{
+
+        .header404 {
             font-family: 'Chango', cursive;
             font-size: 48px;
+            color: #646262;
         }
-        .content404{
+
+        .content404 {
             text-align: center;
+            color: black;
+        }
+
+        .link404 {
+            color: #484848;
         }
     </style>
 </head>
@@ -35,9 +50,8 @@
             Uh-oh! We couldn't find the page you are looking for.
         </div>
         <p>
-            <a href="/">Check the home page</a>
+            <a href="/" class="link404">Home Page</a>
         </p>
     </main>
-    
 </body>
 </html>
